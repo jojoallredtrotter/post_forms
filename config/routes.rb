@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'outreach/index'
+  root 'outreach#index'
+
 
   post 'outreach/status' => 'outreach#status'
 
