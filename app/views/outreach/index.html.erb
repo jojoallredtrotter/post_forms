@@ -1,0 +1,29 @@
+<h1>Enter User Information</h1>
+<p>Please enter User Info and Status below</p>
+
+<div>
+	<%= form_tag('/outreach/status') do %>
+
+	Name <%= text_field_tag :name %><br />
+
+	Street Address: <%= text_field_tag :address %> <br />
+
+	City: <%= text_field_tag :city %> <br />
+
+	State: <%= select_tag :state, options_for_select(@state.collect {|state| [ state ] }) %><br />
+
+
+	Zip Code <%= text_field_tag :zip %> <br />
+
+	<br />
+
+	Status: <%= select_tag :status, "<option>Active</option><option>Inactive</option>".html_safe %><br />
+
+	<br />
+
+	<%= submit_tag "Submit User" %>
+
+	<% end %>
+
+</div>
+

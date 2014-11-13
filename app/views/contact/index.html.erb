@@ -1,0 +1,34 @@
+<h1>Enter Contact Info</h1>
+
+<div> 
+	<%= form_tag('/contact/save') do %>
+
+	First Name: <%= text_field_tag :first_name %><br />
+
+	Last Name: <%= text_field_tag :last_name %><br />
+
+	Email: <%= text_field_tag :email %><br />
+
+	<%= submit_tag "Submit Info" %>
+
+	<% end %>
+</div>
+
+<div> 
+	<%= form_tag('/contact/credit_card') do %>
+
+	Name on Card: <%= text_field_tag :name %><br />
+
+	Card Number: <%= number_field_tag :cc_number %><br />
+
+	Expiration Date: <%= date_field_tag :expiration %><br />
+
+	<%= submit_tag "Submit CC Info" %>
+	<% end %>
+
+
+
+
+</div>
+
+
